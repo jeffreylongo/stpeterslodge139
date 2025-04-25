@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>St. Petersburg Lodge No. 139</title>
+  <base href="/stpeterslodge139/">
+  <link rel="stylesheet" href="./assets/index-Dkw9qEG8.css">
+  <!-- Fix redirect from 404 page -->
+  <script>
+    (function() {
+      var redirectPath = sessionStorage.getItem('redirectPath');
+      if (redirectPath) {
+        sessionStorage.removeItem('redirectPath');
+        history.replaceState(null, null, redirectPath);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./assets/index-DNn8QZoh.js"></script>
+</body>
+</html>
