@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%; /* white */
+  --foreground: 20 14.3% 4.1%; /* dark text */
+  
+  --muted: 60 4.8% 95.9%; /* light gray */
+  --muted-foreground: 25 5.3% 44.7%; /* muted text */
+  
+  --popover: 0 0% 100%; /* white popover */
+  --popover-foreground: 20 14.3% 4.1%; /* dark text */
+  
+  --card: 0 0% 100%; /* white card bg */
+  --card-foreground: 20 14.3% 4.1%; /* dark card text */
+  
+  --border: 20 5.9% 90%; /* light border */
+  --input: 20 5.9% 90%; /* light input bg */
+  
+  --primary: 215 64% 33%; /* blue #1a4b8f */
+  --primary-foreground: 210 40% 98%; /* light text on blue */
+  
+  --secondary: 45 52% 53%; /* gold #c6a84a */
+  --secondary-foreground: 210 40% 98%; /* light text on gold */
+  
+  --accent: 45 52% 53%; /* gold accent */
+  --accent-foreground: 24 9.8% 10%; /* dark text on accent */
+  
+  --destructive: 0 84.2% 60.2%; /* red */
+  --destructive-foreground: 210 40% 98%; /* light text on red */
+  
+  --ring: 215 64% 33%; /* blue ring */
+  
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 222 47% 11%; /* dark blue bg */
+  --foreground: 210 40% 98%; /* light text */
+  
+  --muted: 217 33% 17%; /* muted dark blue */
+  --muted-foreground: 215 20.2% 65.1%; /* muted light text */
+  
+  --popover: 222 47% 11%; /* dark blue popover */
+  --popover-foreground: 210 40% 98%; /* light text */
+  
+  --card: 222 47% 11%; /* dark blue card */
+  --card-foreground: 210 40% 98%; /* light text */
+  
+  --border: 217 33% 17%; /* dark border */
+  --input: 217 33% 17%; /* dark input */
+  
+  --primary: 215 64% 33%; /* blue */
+  --primary-foreground: 210 40% 98%; /* light text on blue */
+  
+  --secondary: 45 52% 53%; /* gold */
+  --secondary-foreground: 210 40% 98%; /* light text on gold */
+  
+  --accent: 217 33% 17%; /* dark accent */
+  --accent-foreground: 210 40% 98%; /* light text on accent */
+  
+  --destructive: 0 62.8% 30.6%; /* dark red */
+  --destructive-foreground: 210 40% 98%; /* light text */
+  
+  --ring: 212.7 26.8% 83.9; /* ring color */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply bg-white text-gray-800 font-sans;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-cinzel;
+  }
+  
+  /* Custom utility classes */
+  .font-cinzel {
+    font-family: 'Cinzel', serif;
+  }
+  
+  .font-garamond {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .bg-primary-blue {
+    @apply bg-[#1a4b8f];
+  }
+  
+  .bg-primary-blue-dark {
+    @apply bg-[#0d2a53];
+  }
+  
+  .bg-primary-blue-darker {
+    @apply bg-[#071a36];
+  }
+  
+  .bg-primary-gold {
+    @apply bg-[#c6a84a];
+  }
+  
+  .bg-primary-gold-light {
+    @apply bg-[#e5d9b6];
+  }
+  
+  .bg-neutral-light {
+    @apply bg-[#f5f5f5];
+  }
+  
+  .text-primary-blue {
+    @apply text-[#1a4b8f];
+  }
+  
+  .text-primary-blue-dark {
+    @apply text-[#0d2a53];
+  }
+  
+  .text-primary-blue-darker {
+    @apply text-[#071a36];
+  }
+  
+  .text-primary-gold {
+    @apply text-[#c6a84a];
+  }
+  
+  .text-primary-gold-light {
+    @apply text-[#e5d9b6];
+  }
+  
+  .border-primary-blue {
+    @apply border-[#1a4b8f];
+  }
+  
+  .border-primary-gold {
+    @apply border-[#c6a84a];
+  }
+  
+  /* Masonic quote styling */
+  .masonic-quote {
+    position: relative;
+    font-style: italic;
+  }
+  .masonic-quote::before, .masonic-quote::after {
+    content: '"';
+    font-size: 1.5em;
+    color: #c6a84a;
+  }
+  
+  /* Calendar day styling */
+  .calendar-day {
+    min-height: 120px;
+  }
+  
+  /* Event card hover effect */
+  .event-card {
+    transition: transform 0.3s ease;
+  }
+  .event-card:hover {
+    transform: translateY(-5px);
+  }
+}
